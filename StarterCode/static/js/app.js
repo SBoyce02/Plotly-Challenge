@@ -5,9 +5,33 @@
     console.log(data);
   });
   
-
-  // add variable
-
-//   const BBdata =  d3.json("samples.json");
-//   console.log("Belly Button Data": BBdata );
   
+function unpack(rows, index) {
+    return rows.map(function(row) {
+      return row[index];
+    });
+  }
+  
+  
+
+
+function buildPlot() {
+    d3.json("samples.json").then(data => {
+        console.log(data.metadata);
+        console.log(data.metadata.samples);
+
+        var trace1 = {
+         type: 'bar'
+         x: []
+         y:[]
+         text: []
+         name: Top 10 OTUs  
+        }
+
+
+
+
+    });
+}
+
+buildPlot();
