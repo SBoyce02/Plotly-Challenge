@@ -17,9 +17,9 @@
     d3.json("samples.json").then(data => {
         console.log(data.samples);
      
-        var otu_id =  data.samples.otu_ids;
-        var otu_label = data.samples.otu_labels;
-        var otu_values = data.samples.sample_values;
+        var otu_id =  data.map(data => data.samples.otu_ids);
+        var otu_label = data.map(data => data.samples.otu_labels);
+        var otu_values = data.map(data => data.samples.sample_values);
         console.log(otu_label);
 
     }
