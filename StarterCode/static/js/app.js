@@ -1,38 +1,51 @@
 
 
 // Fetch the JSON data and console log it
- d3.json("samples.json").then(function (data) {
-    console.log(data);
-  });
-  
-  
-// function unpack(rows, index) {
-//     return rows.map(function(row) {
-//       return row[index];
-//     });
-//   }
+//  d3.json("samples.json").then(function (data) {
+//     console.log(data);
+//   });
+
+ //var SubjectID =  bellydata.samples.id.map(data => data[0]);
   
 
-// function buildPlot() {
-    d3.json("samples.json").then(data => {
-        console.log(data.samples);
-     
-        var otu_id =  data.map(data => data.samples.otu_ids);
-        var otu_label = data.map(data => data.samples.otu_labels);
-        var otu_values = data.map(data => data.samples.sample_values);
-        console.log(otu_label);
 
-    }
+
+// function buildPlot(SubjectID) {
+//     d3.json("samples.json").then(function(bellydata) {
+//         console.log(bellydata);         
+
+        // var labels= bellydata.samples.map(data => data[3]);
+        // var values = bellydata.samples.map(data => data[2]);
+        // console.log(values);
+        // var otu_ids =  bellydata.samples.id.map(data => data[1]);
+        // console.log(otu_ids);
+
+        
+
+    // });
+    // Trace1 for the Belly Data
 //         var trace1 = {
 //          type: 'bar',
-//          x: unpack(data.metadata.samples, 0),
-//          y: unpack(data.metadata.samples, 3),
-//         //  text: []
-//          name: 'Top 10 OTUs',  
+//          x: ids,
+//          y: values,
+//          text: values,
+//           
+//          orientation: 'h' 
 //         }
 
+    //add varaible for trace data
 //         var traceData = [trace1];
-//         Plotly.plot('#bar', tracedata)
+  // Apply the group bar mode to the layout
+          // var layout  = {
+          //   name: 'Top 10 OTUs',
+          //   margin: {
+          //     l: 100,
+          //     r: 100,
+          //     t: 100,
+          //     b: 100
+        
+          // }
+//         Plotly.plot('#bar', tracedata, layout)
 //     });
 // }
 
